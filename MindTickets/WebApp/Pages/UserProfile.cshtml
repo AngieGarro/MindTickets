@@ -1,0 +1,30 @@
+﻿@page
+@model WebApp.Pages.UserProfileModel
+@{
+	ViewData["Title"] = "Perfil de Usuario";
+}
+<link href="~/css/profileuser.css" rel="stylesheet" />
+<script src="~/js/profileuser.js"></script>
+
+<div class="usr-container">
+    <div class="usr-left-container">
+
+        <section class="detalles-usuario">
+
+            <div class="datos-list-container">
+                <ul id="datos-list" class="datos-list">
+                    <section class="perfil"></section>
+                </ul>
+            </div>
+
+        </section>
+    </div>
+    <div class="usr-right-container">
+        <div class="usr-right-opts">
+            <button id="editar-datos" class="editar-datos opt-card"><i class="fa-solid fa-pen-to-square"></i>Editar Datos</button>
+            <button id="cambiar-pass" class="resetear-email opt-card"><i class="fa-solid fa-key"></i>Cambiar Contraseña</button>
+            <button id="historial-compras" class="historial-compras opt-card"><i class="fa-brands fa-paypal"></i>Cuenta de Paypal</button>
+        </div>
+
+    </div>
+</div>

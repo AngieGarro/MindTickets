@@ -1,0 +1,32 @@
+﻿
+Creating a "Under Construction" page using HTML and CSS is a straightforward process. You can design a simple and visually appealing page that informs visitors that your website is currently under construction. Below is a basic example of how you can structure the HTML and style it using CSS:
+
+HTML (index.html):
+
+html
+Copy code
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;    
+}
+
+.under-construction {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .under-construction h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .under-construction p {
+        font-size: 18px;
+        color: #777;
+    }

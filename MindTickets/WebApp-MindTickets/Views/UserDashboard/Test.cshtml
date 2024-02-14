@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Test";
+    Layout = "~/Views/Shared/_User.cshtml";
+}
+
+<h1>Test</h1>
+
+
+<body>
+
+    <div class="inputBx otro">
+        <label for="image">Agregar foto de perfil <i class="fa fa-user-circle"aria-hidden="true"></i></label>
+        <div class="fotoPer">
+            <img id="image">
+        </div>
+        <div>
+            <button class="btn btn-success" id="btnImagen"><i class="fas fa-user-plus"></i> Nueva Membresía </button>
+        </div>
+    </div>
+
+</body>
+
+<h2>Checkout</h2>
+
+<form method="post" asp-action="StartPayment">
+    <div>
+        <label>Amount:</label>
+        <span>@Model.Amount @Model.Currency</span>
+    </div>
+    <button type="submit">Checkout with PayPal</button>
+</form>
+
+@section Scripts{
+    <!-- Scripts -->
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/v/dt/dt-1.13.5/datatables.min.js"></script>
+    <script src="~/js/DashboardClient.js"></script>
+}

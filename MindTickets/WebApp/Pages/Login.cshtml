@@ -1,0 +1,55 @@
+﻿@page
+@model WebApp.Pages.LoginModel
+@{
+	Layout = "";
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<link href="~/css/site.css" rel="stylesheet" />
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="~/js/controlactions.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/js/login-logout.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MindsTicket Login</title>
+</head>
+<body>
+	<div class="contenedor-login">
+		<div class="login-container">
+			<div class="login-form">
+				<a class="navbar-brand" asp-page="/Index"><img class="img-Logo-login" src="~/images/logotipo mindstickets.png" /></a>
+				<h2>Iniciar Sesión</h2>
+				<br />
+				<form action="#" id="loginForm">
+					<div class="form-group">
+						<label for="username">Email</label>
+						<input type="text" id="username" name="username" required>
+					</div>
+					<div class="form-group">
+						<label for="password">Contraseña</label>
+						<input type="password" id="password" name="password" required>
+					</div>
+					<button type="button" id="btnLogin" asp-page="/HomePage">Iniciar</button>
+				</form>
+				<div class="signup-link">
+					Aún no tiene cuenta?
+					<div class="signup-link">
+						<a asp-page="/RegisterUser">Registrarse</a>
+					</div>
+					<div class="signup-link">
+						Olvidó su contraseña?
+						<a asp-page="/ResetPassword1">Restablecer Contraseña</a>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

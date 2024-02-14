@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "MyEvents";
+    Layout = "~/Views/Shared/_User.cshtml";
+}
+
+@section Styles {
+    <!-- Bootstrap -->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+
+    <!-- StyleSheets -->    
+    <link href="~/css/tickets.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+}
+
+<body>
+    <div class="page">
+        <div class="text-center">
+            <h1 class="display-4">Eventos Futuros</h1>
+        </div>
+
+
+        <div id="tickets-container">
+            <div id="tickets-cards">
+            </div>
+        </div>
+
+    </div>
+</body>
+
+@section Scripts{    
+    
+}
+

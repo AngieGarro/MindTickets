@@ -1,0 +1,216 @@
+﻿/*body {
+    width: 100%;
+    position: relative;
+}
+*/
+h1{
+    text-align:center;
+}
+
+.full-dashboard-container {
+    background: #fff;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: inherit;
+    left: 0;
+    display: block;
+}
+
+    .full-dashboard-container items {
+        margin-top: 40px;
+    }
+
+    .full-dashboard-container li {
+        list-style: none;
+        padding: 15px 0;
+        transition: 0.3s ease;
+    }
+
+    .full-dashboard-container .items li i {
+        color: black;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 14px;
+        margin: 0 10px 0 25px;
+    }
+
+    .full-dashboard-container .items li a {
+        text-decoration: none;
+        color: black;
+        font-weight: 300;
+        transition: 0.3s ease;
+    }
+
+/* ADMINISTRADOR DASHBOARD */
+#inside-container {
+    width: 75vh;
+}
+
+.listados-admin {
+    margin: 60px 0;
+}
+
+    .listados-admin .card {
+        position: inherit;
+        /*    width: 800px;*/
+        background-color: #050505;
+        color: white;
+    }
+
+.admin-containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.h1-admin-panel {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 700;
+}
+
+.button-new {
+    color: black;
+}
+
+.i-container i {
+    font-size: 4em;
+    margin-top: 20px;
+}
+
+.flex-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .flex-body .div-right {
+        width: 50%;
+    }
+
+    .flex-body .div-left {
+        width: 50%;
+    }
+
+.card-body div button {
+    width: 120px;
+}
+
+/* Membership List Admin Dashboard */
+
+.memb_card {
+    background-color: #03FA6E;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    color: white;
+}
+
+.memb_name {
+    width: 100%;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+
+.memb_desc {
+    width: 100%;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px white;
+}
+
+#memblist_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.memb_options {
+    border-top: solid 1px white;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .memb_options button {
+        margin: 5px;
+        width: auto !important;
+        width: 200px !important;
+    }
+
+/* GESTOR DASHBOARD */
+/*Events Modal*/
+.Modal-Container {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 10px;
+    left: 10px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+}
+.Modal {
+    width: 80%;
+    height: 80%;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.Close{
+   position:absolute;
+   top: 5px;
+   right: 5px;
+   display: inline-block;
+   width: 25px;
+   height: 25px;
+   background: #ff0000;
+   color: #ffffff;
+   line-height: 25px;
+   cursor:pointer;
+   border-radius: 50%;
+}
+
+.Modal-Form {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Modal-Form button,a{
+    width:20%;
+}
+
+/*-------------------------*/
+.container-createEvent {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+    display: block;
+}
+
+/*-------------------------------*/

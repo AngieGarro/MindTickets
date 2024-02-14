@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewData["Title"] = "Perfil";
+    Layout = "~/Views/Shared/_User.cshtml";
+}
+
+@section Styles {
+    <!-- Styles -->
+
+    }
+
+<div class="row">
+    <div class="col-sm-4">
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 bg-second-primary">
+                <h6 class="m-0 font-weight-bold text-white"><i class="fas fa-user"></i> Mis Datos</h6>
+            </div>
+            <div class="card-body">
+
+                <form>
+                    <div class="form-row aligns-items-center justify-content-center">
+                        <div class="form-group aligns-items-center justify-content-center">
+                            <img id="cloudinaryImage" src="#" class="rounded mx-auto d-block" style="width: 200px; height: 200px;" alt="profile-picture">
+                            <button type="button" class="btn btn-primary" id="btnImagen">Actualizar</button>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="txtId">Cédula</label>
+                            <input type="text" class="form-control form-control-sm" disabled id="txtId">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="txtNombre">Nombre</label>
+                            <input type="text" class="form-control form-control-sm" id="txtNombre">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="txtLastName">Apellido</label>
+                            <input type="text" class="form-control form-control-sm" id="txtLastName">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="txtCorreo">Correo</label>
+                            <input type="email" class="form-control form-control-sm" disabled id="txtCorreo">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="txTelefono">Telefono</label>
+                            <input type="text" class="form-control form-control-sm" id="txTelefono">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="txtRol">Rol</label>
+                            <input type="text" class="form-control form-control-sm" disabled id="txtRol">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" class="btn btn-success btn-sm btn-block" id="btnSaveChanges">Guardar Cambios</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-sm-4">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 bg-second-primary">
+                <h6 class="m-0 font-weight-bold text-white"><i class="fas fa-key"></i> Cambiar Contraseña</h6>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="txtClaveActual">Contraseña Actual</label>
+                            <input type="password" class="form-control form-control-sm input-validar" id="txtClaveActual" name="Clave Actual">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="txtNewPWD">Nueva Contraseña</label>
+                            <input type="password" class="form-control form-control-sm input-validar" id="txtNewPWD" name="Clave Nueva">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="txtConfirmPWD">Confirmar Contraseña</label>
+                            <input type="password" class="form-control form-control-sm input-validar" id="txtConfirmPWD" name="Confirmar Clave">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" class="btn btn-success btn-sm btn-block" id="btnUpadePWD">Actualizar Contraseña</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <!-- Scripts -->
+    <script src="~/js/profile.js"></script>
+    <!-- DataTables -->
+}

@@ -1,0 +1,59 @@
+﻿
+-----------------------------------
+i, h3, p {
+    color: white;
+}
+
+#ticket-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#ticket-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tick_card {
+    background-color: #231F20;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 370px;
+    height: 100%;
+    overflow-y: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+    .tick_card h3, i {
+        color: #03FA6E;
+    }
+
+.buttons-container {
+    border-top: solid 1px white;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .buttons-container button {
+        margin: 5px;
+        width: auto !important;
+        width: 200px !important;
+    }
+
+#img-fluid {
+    width: 300px;
+    height: auto;
+    padding: 15px;
+}

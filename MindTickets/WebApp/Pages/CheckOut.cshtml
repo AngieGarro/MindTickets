@@ -1,0 +1,56 @@
+﻿@page
+@model WebApp.Pages.CheckOutModel
+@{
+    ViewData["Title"] = "Compra";
+    Layout = "";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<link href="~/css/checkout.css" rel="stylesheet" />
+<!-- Scripts -->
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="~/js/controlactions.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&libraries=places&callback=iniciarMap"></script>
+<script src="~/js/checkout.js"></script>
+<script src="~/js/pages-js/mapa.js"></script>
+<!-- DataTables -->
+<link href="https://cdn.datatables.net/v/dt/dt-1.13.5/datatables.min.css" rel="stylesheet" />
+<script src="https://cdn.datatables.net/v/dt/dt-1.13.5/datatables.min.js"></script>
+
+<body>
+    <div class="checkout-container">
+        <div class="left-block">
+            <h1>Resumen de compra</h1>
+            <ul class="order-summary">
+                <li><label id="title"></label></li>
+                <li><label id="tickets"></label></li>
+                <li><label id="events"></label></li>
+                <li><label id="cost"></label></li>
+                <li><label id="tax"></label></li>
+                <li><label id="total"></label></li>
+            </ul>
+        </div>
+        <div class="right-block">
+            <h1>Información de Pago</h1>
+            
+            <h2>Usuario</h2>
+                <p id="name"></p>
+                <p id="email"></p>
+
+                <h3>Método de Pago</h3>
+                <label>
+                    <img src="/Images/paypal.png" alt="paypal-icon">
+                    <button type="button" class="btn btn-info">Paypal</button>
+                    <button type="button" class="btn btn-dark" id="btnBuy">Sunpe</button>
+                    
+                </label>            
+        </div>
+    </div>
+</body>

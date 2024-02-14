@@ -1,0 +1,33 @@
+﻿body {
+}
+
+.events-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.events_card-t {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.events_card {
+    background-color: #231F20;
+    padding: 20px;
+    border-radius: 10px;
+    width: 370px;
+    height: 100%;
+    overflow-y: auto;
+    justify-content: center;
+    text-align: center;
+}

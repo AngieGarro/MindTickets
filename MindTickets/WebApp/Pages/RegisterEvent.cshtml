@@ -1,0 +1,18 @@
+﻿@page
+@model WebApp.Pages.RegisterEventModel
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maps</title>
+	<link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+	<input class="form-control-plaintext" type="text" id="place-input" placeholder="Ingresa una ubicación..." />
+	<br />
+	<div id="map"></div>
+	<script src="~/js/pages-js/mapa.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&libraries=places&callback=iniciarMap"></script>
+</body>
+</html>

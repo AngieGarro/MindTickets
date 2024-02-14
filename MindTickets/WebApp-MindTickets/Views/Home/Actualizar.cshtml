@@ -1,0 +1,62 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	Layout = "";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Actualizar</title>
+	<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+	<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.css" rel="stylesheet" />
+	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+	<link href="~/css/site.css" rel="stylesheet" />
+	<script src="~/lib/jquery/dist/jquery.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	<script src="~/js/controlactions.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="~/js/resetpassword.js"></script>
+</head>
+<body>
+	<div class="row justify-content-center mt-5">
+
+		<div class="col-5">
+
+			<div class="card">
+				<div class="card-header"><h3 class="text-center">Restablecer Contraseña</h3></div>
+				<div class="card-body">
+					<form>
+						<div class="mb-3">
+						<label for="email">Ingrese su Correo</label>
+						<input type="text" id="txt_email" name="email" required>
+						<br />
+						</div>
+						<div class="mb-3">
+							<label>Ingresar una nueva contraseña</label>
+							<input type="password" id="txt_password" class="form-control" name="clave" required />
+						</div>
+						<div class="mb-3">
+							<label>Confirmar contraseña</label>
+							<input type="password" class="form-control" id="txt_password2" name="confirmarClave" required />
+						</div>
+
+						<div class="mb-3">
+							<div class="d-grid">
+								<button class="btn btn-primary" type="button" id="btnUpdate">Cambiar</button>
+							</div>
+						</div>
+						<br />
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

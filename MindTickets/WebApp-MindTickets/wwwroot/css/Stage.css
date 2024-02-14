@@ -1,0 +1,129 @@
+﻿body {
+    /*background-color: deepskyblue;*/
+}
+
+.mapdiv {
+    width: 50%;
+    margin: auto;
+}
+
+    .mapdiv path {
+        stroke: #000;
+        stroke-width: 4px;
+        transition: fill 0.3s;
+    }
+
+        .mapdiv path:hover {
+            fill: #000;
+        }
+
+    .mapdiv #noHover {
+        pointer-events: none;
+    }
+
+
+
+
+.seat-map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #f0f0f0;
+}
+
+/* Estilos para el mapa de asientos */
+.seat-map {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los asientos */
+.seat {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: #dddddd;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    font-size: 12px;
+    line-height: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+    .seat:hover {
+        background-color: #3498db; 
+        color: #fff; 
+        cursor: pointer; 
+    }
+
+.selected-seat {
+    background-color: #ff0000; 
+}
+
+form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0);
+    margin-bottom: 1rem;
+}
+
+.card.card-info {
+    position: fixed;
+    top: 190px;
+    right: 0;
+    height: 100vh;
+}
+
+#seat-card {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(-20px);
+}
+
+.custom-shadow {
+    box-shadow: 0 5px 15px rgb(0 0 0);
+    transition: all 0.3s ease;
+}
+
+.stretched {
+    transform: scaleY(1.2); 
+}
+
+table {
+    --bs-table-color: #000!important;
+}
+
+.table-row td {
+    border-bottom: 1px solid #ccc;
+    /*padding: 8px 12px;*/
+    text-align: -webkit-center;
+}
+
+
+

@@ -1,0 +1,190 @@
+﻿.perfil {
+    display: flex;
+    justify-content: center;
+}
+
+
+    .perfil img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        margin-bottom: 30px;
+        border: 10px solid #4A6FB5;
+        transition: 0.5s;
+    }
+
+.detalles-usuario {
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+    .detalles-usuario ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .detalles-usuario li {
+        margin-bottom: 10px;
+    }
+
+    .detalles-usuario strong {
+        margin-right: 10px;
+    }
+
+/*
+#03FA6E
+#050505
+#231F20
+#FFFFFF
+*/
+
+.usr-container {
+    background-color: #050505;
+    height: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.usr-left-container {
+    color: white;
+    width: 40%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #231F20;
+    padding: 20px;
+}
+
+.usr-right-container {
+    width: 100%;
+    color: white;
+}
+
+.datos-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.opt-card {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #231F20;
+    margin: 20px;
+    color: white;
+    border: none;
+    transition: 0.3s;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.usr-right-opts {
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+}
+
+.opt-card i {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.opt-card:hover {
+    background-color: #03FA6E;
+    color: black;
+}
+
+.user-name {
+    font-weight: 700;
+    font-size: 32px;
+    word-break: break-word;
+    text-align: center;
+}
+
+.edit-usr-cont {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .edit-usr-cont button {
+        width: 100%;
+    }
+
+    .edit-usr-cont form {
+        max-width: 300px;
+    }
+
+.conf-card {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cancel-btn {
+    margin-right: 20px;
+}
+
+.op-card-cam {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .op-card-cam select {
+        max-width: 300px;
+    }
+
+    .op-card-cam h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+#cont-btn-pass {
+    margin-top: 20px;
+}
+
+@media (max-width: 850px) {
+    .usr-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .usr-left-container, .usr-right-container, .op-card-cam {
+        width: 100%;
+        max-width: none;
+    }
+
+    .opt-card {
+        width: 125px;
+        height: 125px;
+        font-size: 12px;
+    }
+
+    .conf-card, .edit-usr-cont {
+        width: auto;
+    }
+
+    .opt-card i {
+        font-size: 48px;
+    }
+}

@@ -1,0 +1,230 @@
+﻿
+@{
+    ViewData["Title"] = "CreateEvents";
+    Layout = "~/Views/Shared/_Gestor.cshtml";
+}
+
+<div class="mapdiv container">
+	<div class="card card-warning">
+		<div class="card-header">
+			<h3 class="card-title">Crear Evento</h3>
+		</div>
+		<section id="event-info">
+			<div class="card-body">
+						<form id="form-event">
+					<h5>Datos Generales del Evento</h5>
+					<br />
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label>Nombre del Evento</label>
+								<input type="text" class="form-control" name="nameEvent" placeholder="Nombre del Evento" id="eventName">
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label>Slogan</label>
+								<input type="text" class="form-control" name="slogan" placeholder="Enter ..." id="eventSlogan">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+
+							<div class="form-group">
+								<label>Descripcion</label>
+								<textarea class="form-control" name="description" rows="3" placeholder="Describe el evento" id="eventDescription"></textarea>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label>Fecha:</label>
+								<div class="input-group date" id="datepicker">
+									<input type="date" id="eventDate" name="date" class="form-control">
+									<span class="input-group-append">
+										<span class="input-group-text bg-white">
+											<i class="bi bi-calendar-event"></i>
+										</span>
+									</span>
+									<br />
+									<label>Hora:</label>
+									<input type="text" id="eventTime" name="Time" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<h5>Dirección</h5>
+						<br />
+						<div class="col-sm-6">
+							<label for="txtProvince" class="form-label">Provincia</label>
+							<input type="text" class="form-control" id="txtProvince">
+						</div>
+						<div class="col-sm-6">
+							<label for="txtCanton" class="form-label">Cantón</label>
+							<input type="text" class="form-control" id="txtCanton">
+						</div>
+						<div class="col-sm-6">
+							<label for="txtDistrict" class="form-label">Distrito</label>
+							<input type="text" class="form-control" id="txtDistrict">
+						</div>
+						<div class="col-12">
+							<label for="txtExactAdd" class="form-label">Dirección Exacta</label>
+							<input type="text" class="form-control" id="txtExactAdd">
+						</div>
+						<br />
+					</div>
+					
+
+					<div class="form-group">
+						<label class="col-form-label" for="inputError">
+							<i class="bi bi-x-circle"></i>Restricciones
+						</label>
+						<input type="text" class="form-control is-invalid" id="inputRestrictions" name="restrictions" placeholder="Escribe que no se permite o esta prohibido">
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+
+							<div class="form-group">
+								<label>Organizador</label>
+								<input type="text" class="form-control" name="organizer" placeholder="Nombre del Organizador" id="organizerName">
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label>Telefono del Evento</label>
+								<input type="text" class="form-control" name="phone" placeholder="Numero telefonico de contacto" id="eventPhone">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-form-label" for="inputWarning">
+							<i class="bi bi-envelope-exclamation"></i> Correo Electronico
+						</label>
+						<input type="text" class="form-control is-warning" name="email" placeholder="Correo para el evento" id="eventEmail">
+					</div>
+					<div class="row">
+						
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Sitio Web</label>
+								<input type="text" class="form-control" name="link" placeholder="Link de la pagina web" id="eventWeb">
+							</div>
+						</div>
+						
+						<div class="col-md-6">
+							<div class="form-group">
+							<label for="eventCategory" class="form-label mt-4">Categoria</label>
+							<select class="form-select" id="eventCategory">
+								<option>Seleccione una categoria</option>
+								<option>Comedia</option>
+								<option>Concierto</option>
+								<option>Congresos</option>
+								<option>Culturales</option>
+								<option>Deportes</option>
+								<option>Familiar</option>
+								<option>Festivales</option>
+								<option>Teatro</option>
+							</select>
+							</div>
+						</div>
+					</div>
+					<br />
+					<div class="row">
+						<div class="col-md-6">
+							<img id="EventPicture" src="#" class="rounded mx-auto d-block" style="width: 100px; height: 100px;" alt="Picture">
+							<button type="button" class="btn btn-primary" id="btnImagen">Cargar</button>
+						</div>
+
+						<div class="col-md-6">
+							<legend class="col-md-6">Modalidad</legend>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="optionsRadios" id="eventModality" value="Presencial" checked="">
+								<label class="form-check-label" for="optionsRadios1">
+									Presencial
+								</label>
+							</div>
+						</div>
+					</div>					
+						</form>
+			</div>
+		</section>
+
+		<hr>
+
+		<section id="ticket-details">
+			<div class="card-body">
+				<form id="form-event-tickets">					
+					<div class="row">								
+						<h4> Tickets</h4>
+						<p>Ingrese los datos por tipos de tiquetes que va a contener el evento</p>
+						<br />
+						
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">									
+									<label for="cantidadVIP">VIP</label>
+									<input type="number" class="form-control" name="VIP" placeholder="Cantidad de Tickets" id="cantidadVIP">
+									<label for="costoVIP">Costo:</label>
+									<input type="number" name="category" class="form-control" id="costoVIP" placeholder="₡">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">									
+									<label for="cantidadEspecial">Especial</label>
+									<input type="number" class="form-control" name="cantidadEspecial" placeholder="Cantidad de Tickets" id="cantidadEspecial">
+									<label for="costoEspecial">Costo:</label>
+									<input type="number" name="category" class="form-control" id="costoEspecial" placeholder="₡">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">									
+									<label for="cantidadRegular">Regular</label>
+									<input type="number" class="form-control" name="cantidadRegular" placeholder="Cantidad de Tickets" id="cantidadRegular">
+									<label for="costoRegular">Costo:</label>
+									<input type="number" name="category" class="form-control" id="costoRegular" placeholder="₡">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">									
+									<label for="cantidadGratis">Gratis</label>
+									<input type="number" class="form-control" name="cantidadGratis" placeholder="Cantidad de Tickets" id="cantidadGratis">
+									<label for="costoGratis">Costo: </label>
+									<input type="number" name="category" class="form-control" id="costoGratis" placeholder="₡0" disabled>
+								</div>
+							</div>
+						</div>
+					</div>
+					</form>
+			</div>
+		</section>
+
+		<hr> <!-- This creates a horizontal line -->
+
+		<section id="scenarios">
+			<div class="card-body">
+				<form>
+					<br />
+					<h4>Selección de Escenarios</h4>
+					<!-- Mostrar Vista para seleccionar Escenarios -->
+					<p>Evento Masivo: Capacidad de 100 a más</p>
+					<input class="form-check-input" type="radio" value="Masivo" name="inStage" style="background-color:darkgreen">
+					<br />
+					<p>Evento Mediano: Capacidad de 50 a 100</p>
+					<input class="form-check-input" type="radio" value="Mediano" name="inStage" style="background-color:darkgreen">
+					<br />
+					<p>Evento Pequeño: Capacidad de 50</p>
+					<input class="form-check-input" type="radio" value="Pequeño" name="inStage" style="background-color:darkgreen">
+					<br />
+					
+				</form>
+				</div>
+		</section>
+		<button class="btn btn-primary" id="btnCreate">Crear Evento</button>
+	</div>
+</div>
+
+
+@section Scripts{
+    <script src="~/js/dashboardgestor.js"></script>
+}

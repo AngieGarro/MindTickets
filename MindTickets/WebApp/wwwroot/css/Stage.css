@@ -1,0 +1,74 @@
+﻿body {
+    /*background-color: deepskyblue;*/
+}
+
+.mapdiv {
+    width: 50%;
+    margin: auto;
+}
+
+    .mapdiv path {
+        stroke: #000;
+        stroke-width: 4px;
+        transition: fill 0.3s;
+    }
+
+        .mapdiv path:hover {
+            fill: #000;
+        }
+
+    .mapdiv #noHover {
+        pointer-events: none;
+    }
+
+
+
+
+.seat-map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #f0f0f0;
+}
+
+/* Estilos para el mapa de asientos */
+.seat-map {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los asientos */
+.seat {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: #dddddd;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    font-size: 12px;
+    line-height: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+.selected-seat {
+    background-color: #ff0000; /* Cambia al color que desees */
+}
+
+
+
+
+form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+}

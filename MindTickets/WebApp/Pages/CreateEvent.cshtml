@@ -1,0 +1,189 @@
+﻿@page
+@model WebApp.Pages.CreateStageModel
+@{
+    ViewData["Title"] = "Crear Eventos";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap4.5.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/js/Stage.js"></script>
+
+<body>
+    <div class="mapdiv container">
+        <div class="card card-warning">
+            <div class="card-header">
+                <h3 class="card-title">Crear Evento</h3>
+            </div>
+
+            <div class="card-body">
+                <form id="form1">
+                    <div class="row">
+                        <div class="col-sm-6">
+
+                            <div class="form-group">
+                                <label>Nombre del Evento</label>
+                                <input type="text" class="form-control" name="nameEvent" placeholder="Nombre del Evento">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Slogan</label>
+                                <input type="text" class="form-control" name="slogan" placeholder="Enter ...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+
+                            <div class="form-group">
+                                <label>Descripcion</label>
+                                <textarea class="form-control" name="description" rows="3" placeholder="Describe el evento"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Fecha y Hora:</label>
+                                <div class="input-group date" id="datepicker">
+                                    <input type="datetime-local" name="date" class="form-control">
+                                    <span id="btnDatePicker" class="input-group-append">
+                                        <span  class="input-group-text bg-white">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                    </span>
+                                </div>          
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputError">
+                            <i class="far fa-times-circle"></i> Restricciones
+                        </label>
+                        <input type="text" class="form-control is-invalid" id="inputError" name="restrictions" placeholder="Escribe que no se permite o esta prohibido">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+
+                            <div class="form-group">
+                                <label>Organizador</label>
+                                <input type="text" class="form-control" name="organizer" placeholder="Nombre del Organizador">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Telefono del Evento</label>
+                                <input type="text" class="form-control" name="phone" placeholder="Numero telefonico de contacto">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputWarning">
+                            <i class="far fa-bell"></i> Correo Electronico
+                        </label>
+                        <input type="text" class="form-control is-warning" name="email" placeholder="Correo para el evento">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Sitio Web</label>
+                                <input type="text" class="form-control" name="link" placeholder="Link de la pagina web">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Categoria del Evento</label>
+                                <input type="text" name="category" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="Presencial" name="inStage">
+                                    <label class="form-check-label">Presencial</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="virtual" value="Virtual" checked="">
+                                    <label class="form-check-label">Virtual</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" id="minimizar" class="btn btn-primary">Siguiente</button>
+                    </div>
+                </form>
+               
+            </div>
+            <form id="formulario2" style="display: none;">
+                <!-- Contenido del segundo formulario aquí -->
+                <button id="restaurar">Restaurar</button>
+            </form>
+        </div>
+    </div>
+    <script src="~/js/Stage.js"></script>
+    <script>
+        $(document).ready(function () {
+            var formulario1 = $("#form1");
+            var formulario2 = $("#formulario2");
+
+            $("#minimizar").click(function () {
+                formulario1.fadeOut("slow", function () {
+                    formulario2.fadeIn("slow");
+                });
+            });
+
+            $("#restaurar").click(function () {
+                formulario2.fadeOut("slow", function () {
+                    formulario1.fadeIn("slow");
+                });
+            });
+
+            //Enviar formulario
+            var ctrlActions = new ControlActions();
+
+            //Enviar formulario
+            $("#form1").click(function () {
+                // Obtener los valores de los campos del formulario
+                var nameEvent = $("input[name='nameEvent']").val();
+                var slogan = $("input[name='slogan']").val();
+                var description = $("textarea[name='description']").val();
+                var date = $("input[name='date']").val();
+                var restrictions = $("input[name='restrictions']").val();
+                var organizer = $("input[name='organizer']").val();
+                var phone = $("input[name='phone']").val();
+                var email = $("input[name='email']").val();
+                var link = $("input[name='link']").val();
+                var category = $("input[name='category']").val();
+                var inStage = $("input[name='inStage']:checked").val();
+                var virtual = $("input[name='virtual']:checked").val();
+
+                // Crear el objeto de datos a enviar al servidor
+                var data = {
+                    nameEvent: nameEvent,
+                    slogan: slogan,
+                    description: description,
+                    date: date,
+                    restrictions: restrictions,
+                    organizer: organizer,
+                    phone: phone,
+                    email: email,
+                    link: link,
+                    category: category,
+                    inStage: inStage,
+                    virtual: virtual
+                };
+
+                // Obtener la URL de la acción del controlador
+                var urlService = '@Url.Action("Stage", "ReserveSeat")'; // Reemplazar con la ruta correcta
+                var ctrlActions = new ControlActions();
+                // Enviar la solicitud POST a la API utilizando ControlActions
+                ctrlActions.PostToAPI(urlService, data, function (response) {
+                    // Aquí puedes manejar la respuesta del servidor
+                    // Puedes actualizar la página, mostrar un mensaje, etc.
+                });
+            });
+
+        });
+    </script>
+</body>
